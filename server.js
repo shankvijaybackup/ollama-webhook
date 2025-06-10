@@ -62,4 +62,6 @@ app.post('/deploy-ollama', async (req, res) => {
   });
 });
 
-app.listen(4000, () => console.log("🚀 Webhook listening on port 4000"));
+const port = process.env.PORT || 4000;
+app.listen(port, () => console.log(`🚀 Webhook listening on port ${port}`));
+
